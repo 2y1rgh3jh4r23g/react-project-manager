@@ -31,10 +31,19 @@ class App extends React.Component {
     });
   }
 
+  handleAddProject(project) {
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({
+      projects: projects,
+    });
+    //console.log(project);
+  }
+
   render() {
     return (
       <div className='App'>
-        <AddProject />
+        <AddProject addProject={this.handleAddProject.bind(this)} />
         <Projects projects={this.state.projects} />
       </div>
     );
