@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         My App
-        <Projects />
+        <Projects projects={this.state.projects} />
       </div>
     );
   }
