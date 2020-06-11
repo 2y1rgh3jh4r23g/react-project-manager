@@ -7,6 +7,12 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      projects: [],
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
       projects: [
         {
           title: "Business Website",
@@ -21,7 +27,7 @@ class App extends React.Component {
           category: "Web Development",
         },
       ],
-    };
+    });
   }
 
   render() {
