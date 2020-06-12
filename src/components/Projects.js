@@ -10,7 +10,12 @@ class Projects extends React.Component {
         return <ProjectItem key={project.title} project={project} />;
       });
     }
-    return <div className='projects'>{projectItems}</div>;
+    return (
+      <div className='projects'>
+        <h3>Latest Projects</h3>
+        {projectItems}
+      </div>
+    );
   }
 }
 
